@@ -4,6 +4,8 @@ import EjercicioPractico_AndyRojas.EjercicioPractico_AndyRojas.domain.Producto;
 import java.util.List;
 
 public interface ProductoService {
-    List<Producto> getProductos();
+    List<Producto> listarProductos();
+    Producto obtenerProductoPorId(Long id);
     void guardarProducto(Producto producto);
+    void eliminarProducto(Long id);
 }
