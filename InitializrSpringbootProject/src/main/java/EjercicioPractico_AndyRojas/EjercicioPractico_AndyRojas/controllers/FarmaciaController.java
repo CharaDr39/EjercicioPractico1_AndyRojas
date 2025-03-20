@@ -6,18 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class FarmaciaController {
     
-    @GetMapping("/productos")
-    public String productos() {
-        return "farmacia/productos"; // Apunta a templates/farmacia/productos.html
-    }
-
     @GetMapping("/categorias")
     public String categorias() {
-        return "farmacia/categorias"; // Apunta a templates/farmacia/categorias.html
+        return "farmacia/categorias"; // Retorna src/main/resources/templates/farmacia/categorias.html
     }
 
-    @GetMapping("/formulario")
-    public String formulario() {
-        return "farmacia/formulario"; // Apunta a templates/farmacia/formulario.html
+    @GetMapping("/sugerencias")
+    public String sugerencias() {
+        return "farmacia/sugerencias"; // Retorna src/main/resources/templates/farmacia/sugerencias.html
     }
 }

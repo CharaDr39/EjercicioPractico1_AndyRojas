@@ -19,13 +19,13 @@ public class ProductoController {
     @GetMapping
     public String listarProductos(Model model) {
         model.addAttribute("productos", productoService.listarProductos());
-        return "farmacia/productos";
+        return "farmacia/productos"; // Retorna src/main/resources/templates/farmacia/productos.html
     }
 
     @GetMapping("/nuevo")
     public String mostrarFormularioNuevo(Model model) {
         model.addAttribute("producto", new Producto());
-        return "farmacia/formulario";
+        return "farmacia/producto_formulario"; // Retorna src/main/resources/templates/farmacia/producto_formulario.html
     }
 
     @PostMapping("/guardar")

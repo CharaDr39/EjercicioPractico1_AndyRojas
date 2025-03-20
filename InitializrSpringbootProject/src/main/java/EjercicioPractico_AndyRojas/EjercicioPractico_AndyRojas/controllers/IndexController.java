@@ -5,8 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class IndexController {
+    
     @GetMapping("/")
     public String index() {
-        return "farmacia/index";
+        return "farmacia/index"; // Retorna src/main/resources/templates/farmacia/index.html
     }
 }

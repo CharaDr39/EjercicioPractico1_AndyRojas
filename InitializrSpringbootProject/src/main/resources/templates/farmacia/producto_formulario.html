@@ -2,7 +2,7 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Sugerencias - Farmacia</title>
+    <title>Agregar Producto - Farmacia</title>
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.1/css/bootstrap.min.css}">
 </head>
 <body>
@@ -25,21 +25,21 @@
         </nav>
     </header>
     <main class="container mt-4">
-        <h1>Quejas y Sugerencias</h1>
-        <form action="/sugerencias/guardar" method="post">
+        <h1>Agregar Producto</h1>
+        <form action="/productos/guardar" method="post" th:object="${producto}">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Tu nombre" required>
+                <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
             </div>
             <div class="mb-3">
-                <label for="correo" class="form-label">Correo</label>
-                <input class="form-control" type="email" name="correo" id="correo" placeholder="tuemail@ejemplo.com" required>
+                <label for="precio" class="form-label">Precio</label>
+                <input class="form-control" type="number" name="precio" id="precio" placeholder="Precio" required>
             </div>
             <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" name="mensaje" id="mensaje" placeholder="Tu queja o sugerencia" rows="4" required></textarea>
+                <label for="stock" class="form-label">Stock</label>
+                <input class="form-control" type="number" name="stock" id="stock" placeholder="Stock" required>
             </div>
-            <button class="btn btn-primary" type="submit">Enviar</button>
+            <button class="btn btn-primary" type="submit">Guardar</button>
         </form>
     </main>
     <footer class="text-center mt-4">

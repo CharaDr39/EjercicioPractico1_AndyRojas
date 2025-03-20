@@ -4,6 +4,7 @@ package EjercicioPractico_AndyRojas.EjercicioPractico_AndyRojas.domain;
 import jakarta.persistence.*;
 import java.io.Serializable;
 
+
 @Entity
 @Table(name = "producto")
 public class Producto implements Serializable {
